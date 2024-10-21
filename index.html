@@ -7,47 +7,75 @@
     <style>
         body{
             margin:0;
+            height: 100%;
         }
         .contenedor-flexible{
+            background-color: gray;
             display:flex;
             flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
+            justify-content:flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            height: 100vh;
+            align-content: flex-start;
+        }
+        .contenedor-flexible-2 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .elemento-flexible{
+            font-size:5rem;
+            color:white;
         }
         .uno{
             background-color: red;
-            width: 250px;
-            height: 150px;
+            flex-basis: 50%;
+            height: 100vh;
+            flex-grow: 1;
+            flex-shrink: 1;
+            background-image: url("/bg-05-free-img.jpg");
         }
         .dos{
             background-color: orange;
-            width: 250px;
-            height: 50px;
+            flex-basis: 50vh;
+            flex-grow: 2;
+            flex-shrink: 1;
+            background-image: url("/bg-07-free-img.jpg");
         }
         .tres{
             background-color: blue;
-            width: 250px;
-            height: 250px;
+            flex-basis: 50vh;
+            flex-grow: 1;
+            flex-shrink: 1;
+            background-image: url("/bg-06-free-img.jpg");
         }
-        .cuatro{
-            background-color: green;
-            width: 250px;
-            height: 20px;
+        .opaco
+        {
+            background-color: rgb(0, 0, 0,0.3);
+            width: 100%;
+            height: 100%;
         }
-        .cinco{
-            background-color: violet;
-            width: 250px;
-            height: 250px;
-        }
+        
     </style>
 </head>
 <body>
     <div class="contenedor-flexible">
-        <div class="elemento-flexible uno">1</div>
-        <div class="elemento-flexible dos">2</div>
-        <div class="elemento-flexible tres">3</div>
-        <div class="elemento-flexible cuatro">4</div>
+        <div class="elemento-flexible uno">
+            <div class="opaco"></div>
+            
+        </div>
+        <div class="contenedor-flexible-2">
+            <div class="elemento-flexible dos"></div>
+            <div class="elemento-flexible tres"></div>
+        </div>
+        <!--<div class="elemento-flexible cuatro">4</div>
         <div class="elemento-flexible cinco">5</div>
+        <div class="elemento-flexible seis">6</div>
+        <div class="elemento-flexible siete">7</div>
+        <div class="elemento-flexible ocho">8</div>-->
+
     </div>
+    <img src="/bg-05-free-img.jpg" alt="una sabrosa hamburguesa">
 </body>
 </html>
